@@ -1,10 +1,9 @@
 import mongoose from 'mongoose';
-import { config } from 'dotenv';
-config();
+import 'dotenv/config';
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@main.ir5pn.mongodb.net/agenda?retryWrites=true&w=majority`,
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.s6iet.mongodb.net/courier?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
