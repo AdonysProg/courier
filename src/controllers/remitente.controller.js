@@ -31,13 +31,16 @@ export const createRemitente = async (req, res) => {
     });
   } catch (err) {
     res.status(400).json(err);
+    console.log(err);
   }
 };
 
 export const updateRemitenteById = async (req, res) => {
   const { id } = req.params;
   try {
-    const updatedRemitente = await Remitente.findByIdAndUpdate(id);
+    const updatedRemitente = await Remitente.findByIdAndUpdate(id, {
+      ...req.body,
+    });
     res.status(200).json(updatedRemitente);
   } catch (err) {
     res.status(400).json(err);

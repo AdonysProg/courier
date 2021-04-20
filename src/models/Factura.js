@@ -1,15 +1,14 @@
 import { model, Schema } from 'mongoose';
-import Paquete from './Paquete';
 const facturaSchema = new Schema({
   destinatarioNombre: {
     type: String,
     required: true,
   },
-  destinatarioDireccion: {
+  descripcion: {
     type: String,
     required: true,
   },
-  telefono: {
+  total: {
     type: String,
     required: true,
   },
@@ -17,7 +16,6 @@ const facturaSchema = new Schema({
     type: Date,
     required: true,
   },
-  paquetes: [Paquete],
   cancelada: {
     type: Boolean,
     required: true,

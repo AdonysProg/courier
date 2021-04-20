@@ -18,7 +18,7 @@ const paqueteSchema = new Schema({
     required: true,
   },
   costoEnvio: {
-    type: Number,
+    type: String,
     required: true,
   },
   remitente: {
@@ -36,6 +36,11 @@ const paqueteSchema = new Schema({
   fechaEntrega: {
     type: Date,
     required: true,
+  },
+  tipo: {
+    type: String,
+    required: true,
+    default: 'Almacen de Origen',
   },
 });
 
